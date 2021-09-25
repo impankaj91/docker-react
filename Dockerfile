@@ -5,5 +5,5 @@ COPY . /app/
 RUN npm install
 RUN npm run build
 
-#FROM nginx
+FROM nginx
 COPY --from=builder /app/build ./dist/
